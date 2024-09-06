@@ -1,12 +1,11 @@
 from selenium.webdriver.support.wait import WebDriverWait
 from selenium.webdriver.support import expected_conditions as EC
-from sources.data import get_exist_user_data
+from sources.data import existing_email, existing_password
 from sources.locators import StellarBurgersLocators
 
 
 class TestLogIn:
     def test_button_log_in_to_account(self, driver):
-        existing_email, existing_password = get_exist_user_data()
         driver.find_element(*StellarBurgersLocators.LOG_IN_TO_ACCOUNT).click()
         driver.find_element(*StellarBurgersLocators.EMAIL_FIELD).send_keys(existing_email)
         driver.find_element(*StellarBurgersLocators.PASSWORD_FIELD).send_keys(existing_password)

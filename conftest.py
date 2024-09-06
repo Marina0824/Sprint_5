@@ -9,6 +9,7 @@ def browser_settings():
     chrome_options.add_argument(f'--window-size={width}, {height}')
     return chrome_options
 
+
 @pytest.fixture(autouse=True)
 def driver():
     chrome = webdriver.Chrome(options=browser_settings())
