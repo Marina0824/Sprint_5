@@ -18,6 +18,9 @@ class StellarBurgersLocators:
     BUTTON_CONSTRUCTOR = By.XPATH, "//a[contains(@class, 'AppHeader_header') and @href='/']"  # Кнопка Конструктор
     LOGO = By.XPATH, "//div[contains(@class, 'AppHeader_header__logo')]/a"  # Логотип Stellar Burgers
     BUTTON_LOGOUT = By.XPATH, "//button[text()='Выход']"  # Кнопка Выход
-    IS_CURRENT = By.XPATH, "//div[contains(@class, 'tab_tab_type_current')]"  # Раздел - текущий
+    SECTION_ROLLS = By.XPATH, "//span[text()='Булки']/parent::div"  # Раздел Булки
     SECTION_SAUCES = By.XPATH, "//span[text()='Соусы']/parent::div"  # Раздел Соусы
     SECTION_FILLINGS = By.XPATH, "//span[text()='Начинки']/parent::div"  # Раздел Начинки
+    ROLL = By.XPATH, "//img[@alt='Краторная булка N-200i']"  # Булка
+    SAUCE = By.XPATH, "//img[@alt='Соус фирменный Space Sauce']"  # Соус
+    FILLING = By.XPATH, "//img[@alt='Говяжий метеорит (отбивная)']"  # Начинка
