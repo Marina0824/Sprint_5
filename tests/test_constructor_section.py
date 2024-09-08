@@ -7,15 +7,18 @@ class TestConstructorSection:
     def test_rolls(self, driver):
         driver.find_element(*StellarBurgersLocators.SECTION_SAUCES).click()
         driver.find_element(*StellarBurgersLocators.SECTION_ROLLS).click()
-        roll = WebDriverWait(driver, 10).until(EC.presence_of_element_located(StellarBurgersLocators.ROLL))
-        assert roll.is_displayed()
+        WebDriverWait(driver, 10).until(EC.presence_of_element_located(StellarBurgersLocators.ROLLS))
+        rolls = driver.find_element(*StellarBurgersLocators.ROLLS).text
+        assert rolls == 'Булки'
 
     def test_sauces(self, driver):
         driver.find_element(*StellarBurgersLocators.SECTION_SAUCES).click()
-        sauce = WebDriverWait(driver, 10).until(EC.presence_of_element_located(StellarBurgersLocators.SAUCE))
-        assert sauce.is_displayed()
+        WebDriverWait(driver, 10).until(EC.presence_of_element_located(StellarBurgersLocators.SAUCES))
+        sauces = driver.find_element(*StellarBurgersLocators.SAUCES).text
+        assert sauces == 'Соусы'
 
     def test_fillings(self, driver):
         driver.find_element(*StellarBurgersLocators.SECTION_FILLINGS).click()
-        filling = WebDriverWait(driver, 10).until(EC.presence_of_element_located(StellarBurgersLocators.FILLING))
-        assert filling.is_displayed()
+        WebDriverWait(driver, 10).until(EC.presence_of_element_located(StellarBurgersLocators.FILLINGS))
+        fillings = driver.find_element(*StellarBurgersLocators.FILLINGS).text
+        assert fillings == 'Начинки'

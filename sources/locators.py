@@ -21,6 +21,6 @@ class StellarBurgersLocators:
     SECTION_ROLLS = By.XPATH, "//span[text()='Булки']/parent::div"  # Раздел Булки
     SECTION_SAUCES = By.XPATH, "//span[text()='Соусы']/parent::div"  # Раздел Соусы
     SECTION_FILLINGS = By.XPATH, "//span[text()='Начинки']/parent::div"  # Раздел Начинки
-    ROLL = By.XPATH, "//img[@alt='Краторная булка N-200i']"  # Булка
-    SAUCE = By.XPATH, "//img[@alt='Соус фирменный Space Sauce']"  # Соус
-    FILLING = By.XPATH, "//img[@alt='Говяжий метеорит (отбивная)']"  # Начинка
+    ROLLS = By.XPATH, "//h2[contains(@class, 'text text_type_main-medium') and text()='Булки']"  # Булки
+    SAUCES = By.XPATH, "//h2[contains(@class, 'text text_type_main-medium') and text()='Соусы']"  # Соусы
+    FILLINGS = By.XPATH, "//h2[contains(@class, 'text text_type_main-medium') and text()='Начинки']"  # Начинки
